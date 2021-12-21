@@ -12,13 +12,7 @@ export function MeetupList({ meetups }: Props) {
   return (
     <S.Container>
       {meetups.map((meetup) => (
-        <MeetupItem
-          key={meetup.id}
-          title={meetup.title}
-          address={meetup.address}
-          description={meetup.description}
-          imageUrl={meetup.image}
-        />
+        <MeetupItem key={meetup.id} meetup={meetup} />
       ))}
     </S.Container>
   );

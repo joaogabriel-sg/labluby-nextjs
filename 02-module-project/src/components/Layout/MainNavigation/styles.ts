@@ -42,3 +42,11 @@ export const MenuLink = styled(Link)`
     color: white;
   }
 `;
+
+export const TotalFavorites = styled.span`
+  background-color: #cc2062;
+  color: white;
+  border-radius: 12px;
+  padding: 0 1rem;
+  margin-left: 0.5rem;
+`;

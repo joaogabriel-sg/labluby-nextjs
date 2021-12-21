@@ -5,14 +5,17 @@ import { AppRoutes } from "./routes";
 import { Layout } from "./components";
 
 import { GlobalStyle } from "./shared/styles";
+import { FavoritesProvider } from "./store/FavoritesContext";
 
 function App() {
   return (
     <BrowserRouter>
-      <GlobalStyle />
-      <Layout>
-        <AppRoutes />
-      </Layout>
+      <FavoritesProvider>
+        <GlobalStyle />
+        <Layout>
+          <AppRoutes />
+        </Layout>
+      </FavoritesProvider>
     </BrowserRouter>
   );
 }
