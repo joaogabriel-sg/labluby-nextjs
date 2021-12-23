@@ -1,6 +1,11 @@
 import { useRouter } from "next/router";
 
-import { EventContent, EventLogistics, EventSummary } from "@components";
+import {
+  ErrorAlert,
+  EventContent,
+  EventLogistics,
+  EventSummary,
+} from "@components";
 
 import { getEventById } from "@shared/data";
 
@@ -13,7 +18,11 @@ function EventDetailPage() {
   const event = getEventById(eventId);
 
   if (!event) {
-    return <p>No event found!</p>;
+    return (
+      <ErrorAlert>
+        <S.Message>No event found!</S.Message>
+      </ErrorAlert>
+    );
   }
 
   return (

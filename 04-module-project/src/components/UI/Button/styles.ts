@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Link from "next/link";
 
 export const Container = styled(Link)``;
 
-export const LinkButton = styled.a`
+const buttonCSS = css`
   text-decoration: none;
   cursor: pointer;
   font: inherit;
@@ -16,10 +16,19 @@ export const LinkButton = styled.a`
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
+  justify-content: center;
 
   &:hover,
   &:active {
     background-color: #02afa1;
     border-color: #02afa1;
   }
+`;
+
+export const LinkButton = styled.a`
+  ${buttonCSS}
+`;
+
+export const NormalButton = styled.button`
+  ${buttonCSS}
 `;
