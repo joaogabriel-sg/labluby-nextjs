@@ -4,4 +4,6 @@ export type PostType = {
   image: string;
   excerpt: string;
   date: string;
+  content: string;
+  isFeatured: boolean;
 };
