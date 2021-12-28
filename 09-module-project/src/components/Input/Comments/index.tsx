@@ -2,13 +2,9 @@ import { useEffect, useState } from "react";
 
 import { CommentList, NewComment } from "..";
 
-import * as S from "./styles";
+import { CommentType } from "@shared/types/commentType";
 
-type CommentType = {
-  id: string;
-  name: string;
-  text: string;
-};
+import * as S from "./styles";
 
 type AddCommentHandlerProps = {
   email: string;

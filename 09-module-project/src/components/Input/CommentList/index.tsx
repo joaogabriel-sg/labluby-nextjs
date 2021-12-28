@@ -1,10 +1,6 @@
-import * as S from "./styles";
+import { CommentType } from "@shared/types/commentType";
 
-type CommentType = {
-  id: string;
-  name: string;
-  text: string;
-};
+import * as S from "./styles";
 
 type Props = {
   comments: CommentType[];
@@ -14,7 +10,7 @@ export function CommentList({ comments }: Props) {
   return (
     <S.Container>
       {comments.map((comment) => (
-        <S.Comment key={comment.id}>
+        <S.Comment key={comment._id}>
           <S.Message>{comment.text}</S.Message>
           <S.User>
             By <S.UserName>{comment.name}</S.UserName>
