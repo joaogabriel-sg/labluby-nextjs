@@ -39,7 +39,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
@@ -54,6 +54,7 @@ class MyDocument extends Document {
         </Head>
         <body>
           <Main />
+          <div id="root-notifications"></div>
           <NextScript />
         </body>
       </Html>

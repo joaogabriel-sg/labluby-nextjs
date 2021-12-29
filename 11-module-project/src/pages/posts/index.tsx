@@ -1,4 +1,5 @@
 import { GetStaticProps } from "next";
+import Head from "next/head";
 
 import { AllPosts } from "@components";
 
@@ -10,7 +11,18 @@ type Props = {
 };
 
 function AllPostsPage({ posts }: Props) {
-  return <AllPosts posts={posts} />;
+  return (
+    <>
+      <Head>
+        <title>All Posts</title>
+        <meta
+          name="description"
+          content="A list of all programming-related tutorials and posts!"
+        />
+      </Head>
+      <AllPosts posts={posts} />
+    </>
+  );
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {

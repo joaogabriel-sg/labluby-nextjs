@@ -14,10 +14,11 @@ export const Container = styled.article`
     color: var(--color-grey-800);
   }
 
-  .image {
+  img {
     margin: var(--size-4) auto;
     width: 100%;
     max-width: 600px;
+    text-align: center;
   }
 
   @media (min-width: 768px) {
