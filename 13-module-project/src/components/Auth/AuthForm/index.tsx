@@ -1,5 +1,6 @@
 import { FormEvent, useRef, useState } from "react";
 import { signIn } from "next-auth/client";
+import Router from "next/router";
 
 import classes from "./styles.module.css";
 
@@ -44,6 +45,7 @@ export function AuthForm() {
       });
 
       if (!result?.error) {
+        Router.replace("/profile");
       }
     } else {
       try {
